@@ -1,4 +1,6 @@
-require("dotenv").config()
+if(process.env.NODE_ENV!="production") {
+    require("dotenv").config()
+}
 
 import {app} from "./XShared/infra/http";
 

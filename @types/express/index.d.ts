@@ -2,7 +2,8 @@ import {UserContext} from "../../src/User/domain/UserContext";
 
 declare module 'express' {
     export interface Request {
-        context?: UserContext
+        context?: UserContext;
+        pageQuery?:any;
         body?:any;
     }
 }

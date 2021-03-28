@@ -4,9 +4,13 @@
   "main": "index.js",
   "author": "Vikas",
   "license": "MIT",
+  "engines": {
+      "node": ">=12"
+  },
   "scripts": {
     "build": "tsc",
     "start": "ts-node --files src/app.ts",
+    "heroku:deploy":"tsc && node bin/app.js",
     "dev": "nodemon --config nodemon.json src/app.ts",
     "dev:debug": "nodemon --config nodemon.json --inspect-brk src/app.ts",
     "test": "jest"
